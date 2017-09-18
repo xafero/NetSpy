@@ -1,6 +1,5 @@
 ﻿using System;
 using CommandLine;
-using ICSharpCode.Decompiler;
 
 namespace NetSpy
 {
@@ -8,7 +7,7 @@ namespace NetSpy
     {
         private static int Main(string[] args)
         {
-            var output = new PlainTextOutput(Console.Out);
+            var output = new FilteredTextOutput(Console.Out);
             int res;
             using (var parser = Parser.Default)
             {
